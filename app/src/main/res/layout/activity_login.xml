@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="32dp"/>
+
+    <TextView
+        android:id="@+id/textview_acct_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"
+        android:text="Account Number"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/editTextAcctNumber"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/textview_acct_number"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            app:layout_constraintTop_toTopOf="@id/editTextAcctNumber"
+            app:layout_constraintStart_toStartOf="@id/editTextAcctNumber"
+            app:layout_constraintEnd_toEndOf="@id/editTextAcctNumber"
+            app:layout_constraintBottom_toBottomOf="@id/editTextAcctNumber"
+            android:hint="Account Number"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textview_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/editTextAcctNumber"
+        android:layout_marginTop="16dp"
+        android:text="Password"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/editTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/textview_password"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            app:layout_constraintTop_toTopOf="@id/editTextPassword"
+            app:layout_constraintStart_toStartOf="@id/editTextPassword"
+            app:layout_constraintEnd_toEndOf="@id/editTextPassword"
+            app:layout_constraintBottom_toBottomOf="@id/editTextPassword"
+            android:hint="Password"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/textview_remember_login"
+        app:layout_constraintBottom_toBottomOf="@id/textview_remember_login"/>
+
+    <TextView
+        android:id="@+id/textview_remember_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/checkbox"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword"
+        android:layout_marginTop="16dp"
+        android:text="Remember login"/>
+
+    <TextView
+        android:id="@+id/textview_fingerprint_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintBottom_toBottomOf="@id/textview_remember_login"
+        android:text="Login with fingerprint"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_sign_in"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:background="#33040303"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/textview_remember_login"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Sign In"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textview_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/button_sign_in"
+        android:layout_marginTop="32dp"
+        android:text="Forgot Password?"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
